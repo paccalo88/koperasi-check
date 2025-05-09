@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Semakan Keahlian Koperasi</title>
+  <style>
+    body { font-family: sans-serif; padding: 2em; max-width: 600px; margin: auto; }
+    input { padding: 0.5em; width: 100%; margin-bottom: 1em; }
+    button { padding: 0.5em 1em; }
+    #result { margin-top: 1em; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Semakan Keahlian Koperasi</h1>
+  <p>Sila masukkan nombor kad pengenalan tanpa "-" untuk menyemak status keahlian:</p>
+  <input type="text" id="icInput" placeholder="Contoh: 010203045678"/>
+  <button onclick="semakIC()">Semak</button>
+  <div id="result"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
