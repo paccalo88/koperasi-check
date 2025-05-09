@@ -7,7 +7,11 @@ fetch('anggota.xlsx')
     const sheet = workbook.Sheets[workbook.SheetNames[0]];
     const json = XLSX.utils.sheet_to_json(sheet);
 
-    senaraiIC = json.map(row => row['NO.K/P']?.replace(/-/g, '').trim());
+    // Padamkan tanda '-' dari semua IC
+    senaraiIC = json
+      .map(row => row['KP Baru'])
+      .filter(kp => typeof kp === 'string')
+      .map(kp => kp.replace(/-/g, '').trim());
   });
 
 function semakIC() {
